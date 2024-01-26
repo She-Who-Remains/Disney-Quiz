@@ -1,0 +1,88 @@
+
+
+
+
+
+
+
+
+.main.active{
+    filter: blur(15px);
+}
+
+.quiz--section {
+    position: relative;
+    left: 0;
+    width: 100%;
+    background-color: rebeccapurple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    transition: .8s ease-in-out;
+    transition-delay: .25s;
+}
+.quiz--section.active{
+    left: 0;
+}
+.quiz--instructions{
+    /* DO WE NEED ABSOLUTE , TOP, AND LEFT ? */
+    position: absolute;                                                                                                                                                                                                                         
+    top: 50%;
+    left: 50%;
+    /* WHAT DOES TRANSFORM DO ? */
+    transform: translate(-50%, -50%) scale(.9);
+    width: 500px;
+    background-color: aquamarine;
+    border-radius: 6px;
+    padding: 10px 25px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 1s ease;
+}
+
+.quiz--instructions h2{
+    font-size: 50px;
+    color: darkkhaki;
+}
+
+.quiz--instructions p {
+    display: inline-block;
+    font-size: 16px;
+    color: blue;
+    font-weight: 500;
+    margin: 4px 0;
+}
+
+.button--group{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid yellow; */
+}
+.button--group button{
+    border: 1px solid salmon;
+    /* background-color: beige; */
+}
+.button--group button:hover{
+    background-color: salmon;
+    color: black;
+}
+
+.button--group a{
+    background-color: salmon;
+    color: black;
+}
+.quiz--instructions.active{
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.quiz--box{
+    position: relative;
+    width: 500px;
+    background: transparent;
+    border: 2px solid red;
+    border-radius: 6%;
+}
